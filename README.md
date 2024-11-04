@@ -34,3 +34,11 @@ Positioned(
                   selectedFilter = color;
                 });
 ```
+
+**Penjelasan Async pada pratikum pertama**
+
+Async digunakan agar fungsi main bisa menjalankan operasi asinkron, memungkinkan penggunaan await untuk menunggu availableCameras() menyelesaikan inisialisasi kamera sebelum melanjutkan ke langkah berikutnya. Dengan Future<void>, fungsi ini tetap tidak mengembalikan nilai spesifik, tetapi tetap menunggu proses asinkron di dalamnya selesai sebelum menjalankan runApp.
+
+**Penjelasan dari anotasi @immutable dan @override**
+
+Dalam Dart, anotasi `@immutable` digunakan untuk menandai bahwa semua properti kelas tidak dapat diubah (immutable) setelah objek dibuat, sehingga setiap properti harus diinisialisasi di konstruktor dan tidak boleh diubah. Ini sering digunakan pada kelas widget di Flutter untuk memastikan konsistensi tampilan. Anotasi `@override`, di sisi lain, digunakan saat sebuah metode pada kelas anak ingin menggantikan implementasi metode yang sama dari kelas induknya. Ini membantu untuk memastikan bahwa metode tersebut benar-benar ada di kelas induk, mengurangi kesalahan ketik dan meningkatkan keterbacaan kode.
