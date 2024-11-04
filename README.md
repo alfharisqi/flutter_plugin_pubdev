@@ -14,5 +14,23 @@ Hasil Screenshot Pratikum Pertama dan Kedua Setelah digabunggkan:
 
 ![Screenshot 2024-11-04 111821](https://github.com/user-attachments/assets/62c73d1a-3423-4114-b8b0-ead7e4e1754c)
 
-Penggambungan dari Pratikum 1 dan 2, merupakan penggabungan kamera dan filter, dari penggabungan pratikum tadi, saya hanya mengubah file main dart.
+Penggambungan dari Pratikum 1 dan 2, merupakan penggabungan kamera dan filter, dari penggabungan pratikum tadi, saya hanya mengubah file main dart. Bagian utama yang menghubungkan kamera dan filter pada kode ini berada di dalam build method dari _CameraWithFilterScreenState, khususnya pada Stack widget yang menyusun layout dari pratinjau kamera dan overlay filter.
 
+```
+Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: FilterSelector(
+              filters: [
+                Colors.transparent,
+                Colors.red,
+                Colors.green,
+                Colors.blue,
+                Colors.yellow,
+              ],
+              onFilterChanged: (Color color) {
+                setState(() {
+                  selectedFilter = color;
+                });
+```
